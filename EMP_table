@@ -35,4 +35,51 @@ from emp;
 select *
 from dept;
 
+select *
+from emp
+where deptno=10;
+
+select *
+from emp
+where deptno<>30;
+
+select *
+from emp
+order by sal desc;
+
+select *
+from emp
+where JOB='PRESIDENT' OR JOB='MANAGER' OR JOB='ANALYST';
+
+select *
+from emp
+order by deptno,sal DESC; 
+
+select *
+from emp
+where HIREDATE between '31-DEC-80' AND '01-JAN-82';
+
+select *
+from emp
+where sal>1500 and mgr=7698 or mgr=7566;
+
+select ename
+from emp
+where sal<(select sal from emp where ename='FORD');
+
+select ROWNUM,emp.*
+from emp;
+
+select job
+from emp
+group by job;
+
+select ename
+from emp
+where ename like 'J%' or ename like 'A%' or ename like 'M%';
+
+select DNAME,max(SAL),min(SAL)
+from emp NATURAL JOIN dept
+group by DNAME;
+
 
