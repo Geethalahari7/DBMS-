@@ -87,3 +87,8 @@ from emp
 where empno NOT IN (select empno
     from emp
     where deptno=10 or deptno=20 or deptno=40);
+
+
+25.select ename
+from emp
+where ename LIKE '_L%';
