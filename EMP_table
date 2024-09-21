@@ -92,3 +92,7 @@ where empno NOT IN (select empno
 25.select ename
 from emp
 where ename LIKE '_L%';
+
+30.select  deptno,max(sal),min(sal)
+from emp
+group by deptno;
