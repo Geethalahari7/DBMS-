@@ -82,4 +82,8 @@ select DNAME,max(SAL),min(SAL)
 from emp NATURAL JOIN dept
 group by DNAME;
 
-
+22.select *
+from emp
+where empno NOT IN (select empno
+    from emp
+    where deptno=10 or deptno=20 or deptno=40);
