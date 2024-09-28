@@ -96,3 +96,30 @@ where ename LIKE '_L%';
 30.select  deptno,max(sal),min(sal)
 from emp
 group by deptno;
+
+31.select ename,empno,dname,loc from emp NATURAL JOIN dept;
+
+32.select ename
+from emp 
+where job<>'MANAGER'
+
+37.create table emp1 as select *
+                     from emp
+                    where deptno=10;
+select * from emp1;
+
+39.select * from emp where deptno = (select deptno from emp where ename='JAMES');
+
+40.select * from emp where sal <= (select sal from emp where ename='ADAMS');
+
+41.select ename from emp where mgr=(select empno from emp where ename='BLAKE');
+
+42.select *
+from emp 
+where comm=(select max(comm) from emp);
+
+43.select ename,sal,dname,loc from dept natural join emp;
+
+44.select ename from dept natural join emp where loc='DALLAS';
+
+45.update emp set ename='ANDY' where ename='JONES';
