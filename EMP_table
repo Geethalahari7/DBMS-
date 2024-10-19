@@ -99,7 +99,7 @@ group by deptno;
 
 31.select ename,empno,dname,loc from emp NATURAL JOIN dept;
 
-32.select ename
+34.select ename
 from emp 
 where job<>'MANAGER'
 
